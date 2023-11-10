@@ -1,0 +1,42 @@
+main{
+    margin:1vh;
+}
+.dice{
+    background-color:rgb(252, 252, 252);
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px rgb(141, 140, 140);
+    border-radius: 10%;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    padding: 40px;
+    margin:2vh;
+}
+aside {
+    width:40px;
+    height:40px;
+    background-color:black;
+    border-radius:100%;
+}
+
+.dots-6{
+    grid-gap:40px;
+    grid-template: 1fr 1fr 1fr / 1fr  1fr;
+
+}
+.dots-6 aside{
+    margin-left: 20px;
+
+}
+.dots-5{
+    grid-template-areas:    "aside1 . aside2" 
+                            ". aside3 ."
+                            "aside4 . aside5";
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+
+}
+.dots-5 aside:nth-child(){
+    grid-area:"aside"+var(n);
+    margin-left: 20px;
+
+}
